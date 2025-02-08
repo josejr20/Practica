@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz San Valentin D.....!</title>
+  <title>Feliz San Valentin 💓💓💓!</title>
   <style>
     body {
       display: flex;
@@ -135,6 +135,13 @@
       z-index: 2;
       text-align: left;
       float: right;
+    }
+
+    .corazon {
+      position: absolute;
+      top: 50%;
+      left: 80px;
+      animation: animate 1s linear infinite;
     }
 
     *,
@@ -2369,15 +2376,15 @@
 <body>
 
   <div class="text5">
-    <h2>En cada latido de mi corazón,</h2>
+    <h2>En cada latido de mi corazón 💓,</h2>
     <h2>te encuentro a ti.</h2>
     <h2>Feliz San Valentín,</h2>
-    <h2>mi amor eterno.</h2>
+    <h2>mi amor eterno❤️.</h2>
   </div>
 
   <div class="container">
-    <h1>¿Quieres ser mi San Valentín D.....?</h1>
-    <button id="yesButton">Sí</button>
+    <h1>¿Quieres ser mi San Valentín 🌻🌻🌻?</h1>
+    <button id="yesButton">Sí 🌻</button>
     <button id="noButton">No</button>
     
   </div>
@@ -2385,16 +2392,16 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
-      <p>¡Yo sabía que SI!</p>
+      <p>¡Yo sabía que SI! 🌻</p>
       <button id="acceptButton", onclick="location.href='mensaje.html'">Aceptar</button>
     </div>
   </div>
 
   <div class="text6">
     <h2>Si pudiera,</h2>
-    <h2>te regalaría el universo entero.</h2>
+    <h2>te regalaría el universo entero🌎🌌.</h2>
     <h2>Pero hoy,</h2>
-    <h2>te doy mi amor infinito.</h2>
+    <h2>te doy mi amor infinito♾️. 🌻</h2>
   </div>
 
   <div class="night"></div>
@@ -2825,6 +2832,8 @@
         </path>
       </svg>
 
+      <img src="corazon.gif" loop="infinite" class="corazon">
+
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           const noButton = document.getElementById('noButton');
@@ -2869,6 +2878,21 @@
         });
         onload = () => {
           document.body.classList.remove("container");
+
+          const audio = new Audio("un_año.mp3");
+
+          const playAudio = () => {
+            audio.play().catch(error => {
+              console.log("Reproducción automática bloqueada, esperando interacción del usuario.");
+            });
+          };
+
+          playAudio();
+
+          document.body.addEventListener("click", () => {
+            audio.play();
+          }, { once: true });
+
         };
       </script>
 </body>
